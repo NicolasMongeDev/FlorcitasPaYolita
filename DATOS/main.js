@@ -1,6 +1,21 @@
 onload = () => {
   document.body.classList.remove("container");
 
+  const audio = document.querySelector("audio");
+  if (audio) {
+    audio.volume = 0.7;
+    const start = () => {
+      const p = audio.play();
+      if (p && typeof p.catch === "function") p.catch(() => {});
+      document.removeEventListener("pointerdown", start);
+      document.removeEventListener("keydown", start);
+    };
+    const p = audio.play();
+    if (p && typeof p.catch === "function") p.catch(() => {});
+    document.addEventListener("pointerdown", start);
+    document.addEventListener("keydown", start);
+  }
+
   const seed = (min, max) => Math.random() * (max - min) + min;
 
   const petalsWrap = document.querySelector(".falling-petals");

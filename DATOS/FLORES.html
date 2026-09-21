@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <title>FLORES</title>
 </head>
 
@@ -275,6 +278,22 @@
         </div>
       </div>
     </div>
+    <!-- Petalos cayendo con el viento -->
+    <div class="falling-petals" aria-hidden="true"></div>
+
+    <!-- Mensaje que aparece cuando las flores terminan de crecer -->
+    <div class="flower-message">
+      <span class="rl">Un pequeño presente para empezar el dia</span>
+      <span class="rl">y sacarte una linda sonrisa,</span>
+      <span class="rl">una sonrisa mas hermosa que cualquier flor &lt;3</span>
+    </div>
+
+    <!-- Easter egg: monticulo de petalos que cubre un secreto -->
+    <div class="petal-east" role="button" tabindex="0" aria-label="Toca para descubrir">
+      <div class="petal-mound"></div>
+      <div class="hidden-message">Para mi Yolita,<br>de Nicolas</div>
+    </div>
+
     <script src="main.js"></script>
   </body>
 </html>
